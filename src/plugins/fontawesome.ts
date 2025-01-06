@@ -1,9 +1,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faThreads } from '@fortawesome/free-brands-svg-icons'
+import { faThreads, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 // Add icons to the library
-library.add(faThreads)
+library.add(faThreads, faXTwitter)
 
 // Types
 import type { App } from 'vue'

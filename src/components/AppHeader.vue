@@ -26,6 +26,12 @@
               class="threads-icon"
             />
           </template>
+          <template v-else-if="link.isX">
+            <font-awesome-icon
+              :icon="['fab', 'x-twitter']"
+              class="x-icon"
+            />
+          </template>
           <v-icon
             v-else
             :icon="link.icon"
@@ -37,32 +43,7 @@
 </template>
 
 <script lang="ts">
-const socialLinks = [
-  {
-    icon: "mdi-instagram",
-    url: "https://www.instagram.com/tarowl.app",
-  },
-  {
-    isThreads: true,
-    url: "https://www.threads.net/@tarowl404",
-  },
-  {
-    icon: "mdi-twitter",
-    url: "https://twitter.com/TarOwlApp",
-  },
-  {
-    icon: "mdi-facebook",
-    url: "https://www.facebook.com/profile.php?id=61553731333305",
-  },
-  {
-    icon: "mdi-message-text",
-    url: "https://tarowlai.featurebase.app/",
-  },
-  {
-    icon: "mdi-email",
-    url: "mailto:tarowl.app@gmail.com",
-  },
-];
+import { socialLinks } from "@/data/socialLinks";
 
 export default {
   name: "AppHeader",
@@ -85,7 +66,8 @@ export default {
   transform: translateY(-2px);
 }
 
-.threads-icon {
+.threads-icon,
+.x-icon {
   width: 20px;
   height: 20px;
 }

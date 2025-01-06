@@ -5,11 +5,11 @@
   >
     <v-col
       cols="auto"
-      v-for="(social, index) in socials"
+      v-for="(link, index) in socialLinks"
       :key="index"
     >
       <v-btn
-        :href="social.link"
+        :href="link.url"
         target="_blank"
         rel="noopener noreferrer"
         icon
@@ -18,15 +18,21 @@
         class="social-btn mx-2"
         color="white"
       >
-        <template v-if="social.isThreads">
+        <template v-if="link.isThreads">
           <font-awesome-icon
             :icon="['fab', 'threads']"
             class="threads-icon"
           />
         </template>
+        <template v-else-if="link.isX">
+          <font-awesome-icon
+            :icon="['fab', 'x-twitter']"
+            class="x-icon"
+          />
+        </template>
         <v-icon
           v-else
-          :icon="social.icon"
+          :icon="link.icon"
         />
       </v-btn>
     </v-col>
@@ -40,32 +46,7 @@ export default {
 </script>
 
 <script lang="ts" setup>
-const socials = [
-  {
-    icon: "mdi-instagram",
-    link: "https://www.instagram.com/tarowl.app",
-  },
-  {
-    isThreads: true,
-    link: "https://www.threads.net/@tarowl404",
-  },
-  {
-    icon: "mdi-twitter",
-    link: "https://twitter.com/TarOwlApp",
-  },
-  {
-    icon: "mdi-facebook",
-    link: "https://www.facebook.com/profile.php?id=61553731333305",
-  },
-  {
-    icon: "mdi-message-text",
-    link: "https://tarowlai.featurebase.app/",
-  },
-  {
-    icon: "mdi-email",
-    link: "mailto:tarowl.app@gmail.com",
-  },
-];
+import { socialLinks } from "@/data/socialLinks";
 </script>
 
 <style scoped>
@@ -86,7 +67,8 @@ const socials = [
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.threads-icon {
+.threads-icon,
+.x-icon {
   width: 20px;
   height: 20px;
 }
@@ -97,7 +79,8 @@ const socials = [
     height: 44px !important;
   }
 
-  .threads-icon {
+  .threads-icon,
+  .x-icon {
     width: 18px;
     height: 18px;
   }
