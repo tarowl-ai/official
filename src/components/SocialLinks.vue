@@ -5,11 +5,11 @@
   >
     <v-col
       cols="auto"
-      v-for="(link, index) in socialLinks"
+      v-for="(social, index) in socials"
       :key="index"
     >
       <v-btn
-        :href="link.url"
+        :href="social.link"
         target="_blank"
         rel="noopener noreferrer"
         icon
@@ -18,13 +18,13 @@
         class="social-btn mx-2"
         color="white"
       >
-        <template v-if="link.isThreads">
+        <template v-if="social.isThreads">
           <font-awesome-icon
             :icon="['fab', 'threads']"
             class="threads-icon"
           />
         </template>
-        <template v-else-if="link.isX">
+        <template v-else-if="social.isX">
           <font-awesome-icon
             :icon="['fab', 'x-twitter']"
             class="x-icon"
@@ -32,7 +32,7 @@
         </template>
         <v-icon
           v-else
-          :icon="link.icon"
+          :icon="social.icon"
         />
       </v-btn>
     </v-col>
@@ -46,7 +46,32 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { socialLinks } from "@/data/socialLinks";
+const socials = [
+  {
+    icon: "mdi-instagram",
+    link: "https://www.instagram.com/tarowl404/",
+  },
+  {
+    isThreads: true,
+    link: "https://www.threads.net/@tarowl404",
+  },
+  {
+    isX: true,
+    link: "https://x.com/TarowlA27961",
+  },
+  {
+    icon: "mdi-facebook",
+    link: "https://www.facebook.com/profile.php?id=61571791611669",
+  },
+  {
+    icon: "mdi-message-text",
+    link: "https://tarowlai.featurebase.app/",
+  },
+  {
+    icon: "mdi-email",
+    link: "mailto:tarowl.app@gmail.com",
+  },
+];
 </script>
 
 <style scoped>

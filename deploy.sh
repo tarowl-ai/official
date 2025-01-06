@@ -3,6 +3,9 @@
 # abort on errors
 set -e
 
+# increment patch version
+npm version patch
+
 # get version from package.json
 VERSION=$(node -p "require('./package.json').version")
 
