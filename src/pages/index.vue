@@ -18,7 +18,7 @@
           <v-container class="px-4">
             <AppStoreButtons />
             <p class="text-body-1 text-medium-emphasis mt-8 mb-4 description-text">
-              {{ $t('contact.description') }}
+              {{ t("contact.description") }}
             </p>
             <v-expand-transition>
               <SocialLinks
@@ -34,6 +34,9 @@
 </template>
 
 <script lang="ts" setup>
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 </script>
 
 <style scoped>

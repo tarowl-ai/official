@@ -5,9 +5,10 @@
     "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "vue-i18n": ["node_modules/vue-i18n/dist/vue-i18n.d.ts"],
     },
     "resolveJsonModule": true,
     "types": [

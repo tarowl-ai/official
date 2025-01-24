@@ -6,12 +6,15 @@
       contain
       class="logo-image"
     />
-    <p class="text-h4 font-weight-bold mt-4">{{ $t('app.name') }}</p>
-    <p class="text-h6 font-weight-medium text-grey">{{ $t('app.subtitle') }}</p>
+    <p class="text-h4 font-weight-bold mt-4">{{ t("app.name") }}</p>
+    <p class="text-h6 font-weight-medium text-grey">{{ t("app.subtitle") }}</p>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 </script>
 
 <style scoped>
