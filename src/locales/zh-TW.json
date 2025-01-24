@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於",
+    "contact": "聯絡我們"
+  },
+  "footer": {
+    "rights": "版權所有",
+    "privacy": "隱私政策",
+    "terms": "服務條款"
+  }
+} 

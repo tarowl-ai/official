@@ -1,0 +1,16 @@
+{
+  "app": {
+    "name": "タロウル",
+    "subtitle": "ポケットタロット"
+  },
+  "nav": {
+    "home": "ホーム",
+    "about": "概要",
+    "contact": "お問い合わせ"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  }
+} 

@@ -9,6 +9,7 @@ import vuetify from './vuetify'
 import pinia from '../stores'
 import router from '../router'
 import { registerFontAwesome } from './fontawesome'
+import i18n from './i18n'
 
 // Types
 import type { App } from 'vue'
@@ -18,6 +19,7 @@ export function registerPlugins (app: App) {
     .use(vuetify)
     .use(router)
     .use(pinia)
+    .use(i18n)
   
   registerFontAwesome(app)
 }

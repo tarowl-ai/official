@@ -1,6 +1,6 @@
 {
   "name": "click",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -16,6 +16,7 @@
     "core-js": "^3.37.1",
     "roboto-fontface": "*",
     "vue": "^3.4.31",
+    "vue-i18n": "^9.14.2",
     "vuetify": "^3.6.11"
   },
   "devDependencies": {
