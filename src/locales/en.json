@@ -1,0 +1,16 @@
+{
+  "app": {
+    "name": "TarOwl",
+    "subtitle": "Pocket Tarot"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+} 

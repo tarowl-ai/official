@@ -6,14 +6,12 @@
       contain
       class="logo-image"
     />
-    <p class="text-h4 font-weight-bold mt-4">TAROWL</p>
+    <p class="text-h4 font-weight-bold mt-4">{{ $t('app.name') }}</p>
+    <p class="text-h6 font-weight-medium text-grey">{{ $t('app.subtitle') }}</p>
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: "Logo",
-};
+<script lang="ts" setup>
 </script>
 
 <style scoped>
