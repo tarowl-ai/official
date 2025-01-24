@@ -17,6 +17,9 @@
           <Logo />
           <v-container class="px-4">
             <AppStoreButtons />
+            <p class="text-body-1 text-medium-emphasis mt-8 mb-4 description-text">
+              {{ $t('contact.description') }}
+            </p>
             <v-expand-transition>
               <SocialLinks
                 v-if="$vuetify.display.smAndDown"
@@ -37,6 +40,10 @@
 .bg-background {
   min-height: 100vh;
   position: relative;
+}
+
+.description-text {
+  white-space: pre-line;
 }
 
 @media (max-width: 600px) {
